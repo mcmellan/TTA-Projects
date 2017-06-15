@@ -57,6 +57,7 @@ namespace pizzachallenge
             {
                 total += 0.75;
             }
+           
             if(anchovies.Checked)
             {
                 total += 2.0;
@@ -64,11 +65,15 @@ namespace pizzachallenge
 
 
             if ((pepperoni.Checked
-                && greenPeppers.Checked
-                && anchovies.Checked)
+                 && greenPeppers.Checked
+                 && anchovies.Checked
+                 && !(redPeppers.Checked
+                 && onions.Checked)
                 || (pepperoni.Checked
                 && redPeppers.Checked
-                && onions.Checked))
+                && onions.Checked
+                && !(greenPeppers.Checked
+                && anchovies.Checked))))
 
             {
                 total -= 2;
